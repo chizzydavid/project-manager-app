@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Project Cruncher</title>
+    <link rel="stylesheet" href="css/font-awesome-icons/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">   
+  </head>
+
+  <body>
+    <section id="container">
+      <h1>The Project Cruncher</h1>
+
+      <div id="home">
+        <nav>
+          <p class="nav-item active" id="show-projects-btn">Projects</p>
+          <p class="nav-item" id="show-todo-btn">Todo</p>
+        </nav>
+
+        <div id="project-container" class="curr-display">
+          <div id="project-form-wrapper" class="">
+            <form id="project-form">
+              <div>
+                <h4><span id="project-form-header"> Add New Project </span><i id="project-form-icon" class="fa fa-plus"></i></h4>
+                <p id="error-project"></p>
+                <p class="label">Title</p>
+                <input type="text" id="project-title" required placeholder="e.g. Mop the floors"></br>
+                <p class="label" id="description-label">Description</p>
+                <textarea rows="4" cols="30" name="description" id="project-description" ></textarea></br>
+
+                <p class="label">Deadline</p>
+                <input type="text" id="project-deadline" required placeholder="e.g 1st November, 2018"></br>                                     
+              </div>
+              <div class="buttons">
+                <button type="submit" id="add-project">Add</button>
+                <button type="submit" class="hide" id="save-project-edit">Save</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="project-display">
+            <p id="project-info"></p>
+            <div id="uncompleted-projects"></div>
+            <h3 class="hide"> Completed Projects</h3>
+            <div id="completed-projects"> </div>
+          </div> 
+        </div>
+
+        <div id="todo-container" class="">
+          <div id="todo-form-wrapper" class="">
+            <form id="todo-form">
+              <div>
+                <h4><span id="todo-form-header"> Add Todo </span><i id="todo-form-icon" class="fa fa-plus"></i></h4>
+                <p id="error-todo"></p>
+                <label for="username">Title</label>
+                <input type="text" id="todo-title" required placeholder="e.g. Mop the floors"></br>
+                <label for="priority">Priority</label>
+                  <select id="todo-priority">
+                    <option value="">Set Priority</option>
+                    <option value="3">High</option>
+                    <option value="2">Medium</option>
+                    <option value="1">Low</option>
+                  </select></br>                     
+              </div>
+              <div class="buttons">
+                <button type="submit" id="add-todo">Add</button>
+                <button type="submit" class="hide" id="save-todo-edit">Save</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="todo-display">
+            <p id="todo-info"></p>
+            <div id="uncompleted-todo"></div>
+            <h3 class="hide">Done</h3>
+            <div id="completed-todo"> </div>
+          </div>       
+        </div>        
+      </div>
+
+      <div id="project-viewer" data-project-id=""> 
+        <nav>
+          <p class="nav-item" id="show-home"><i class="fa fa-arrow-left"></i>Back </p>
+        </nav>
+
+        <div id="project-wrapper">
+          <p id="project-details-info"> </p>
+          <div id="project-details" class="">
+            <div id="view-project">
+              <h2 id="pd-title"></h2>
+              <p id="pd-description"> </p>
+
+              <div class="project-details">
+                <div class="deadline-sec">Deadline </br> <span id="pd-deadline" class="deadline"> </span> </div>
+                <div class="progress-sec">Progress: <span id="pd-progress" class="progress"> </span><span>%</span></br> 
+                  <div class="bar-wrapper"> <div id="progress-bar" class="progress-bar"> </div> </div>
+                     
+                </div>
+              </div>
+
+
+              <div id="project-activities">
+                <p id="activity-info"></p>           
+                <div id="uncompleted-activities"></div>
+                <h3 class="hide">Done</h3>
+                <div id="completed-activities"> </div>
+              </div>
+
+              <div id="activity-form-wrapper" class="">
+                <form id="activity-form">
+                  <div>
+                    <h4><span id="activity-form-header"> Add New Activity </span><i id="activity-form-icon" class="fa fa-plus"></i></h4>
+                    <p id="error-activity"></p>
+                    <label for="username">Title</label>
+                    <input type="text" id="activity-title" required placeholder="e.g. Mop the floors"></br>
+
+                    <label for="priority">Priority</label>
+                      <select id="activity-priority">
+                        <option value="">Set Priority</option>
+                        <option value="3">High</option>
+                        <option value="2">Medium</option>
+                        <option value="1">Low</option>
+                      </select></br>
+
+                  </div>
+
+                  <div class="buttons">
+                    <button type="submit" id="add-activity">Add</button>
+                  </div>
+                </form>
+              </div>
+              
+            </div>
+
+
+
+            <div class="buttons">
+              <span id=""><i id="delete-project-icon" class="delete-todo fa fa-trash"></i></span>   
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,453 @@
+body {
+  color: #444;
+  background: #ddd;
+  font-family: sans-serif;
+  line-height: 1.5em;  
+}
+* {
+	box-sizing: border-box;
+}
+#container {
+	width: 480px;
+	margin: 0px auto 100px auto;
+	padding: 10px 20px 50px 20px;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.5);
+	background: #fff;
+}
+
+
+nav {
+	padding-left: 0px;
+}
+h1 {
+	color: #e74c3c;
+	margin: 0;
+	padding: 10px 0px;
+	font-family: serif;
+	font-size: 33px;
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+label {
+	min-width: 80px;
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 14px;
+}
+.nav-item {
+	display: inline-block;
+	margin: 0 6px;
+	padding: 7px 2px;
+	cursor: pointer;
+	letter-spacing: 0.4px;
+	transition: 0.5s ease;
+}
+.nav-item.active {
+	font-weight: bold;
+	border-bottom: solid 2px #e74c3c;
+}
+
+form h4 {
+	color: #666;
+	margin-top: 7px;
+}
+
+#project-form-wrapper {
+	width: 100%;
+	padding: 10px;
+	padding-left: 7px;
+	height: 55px;
+	overflow-y: hidden;
+	transition: 0.3s linear;
+	margin-bottom: 20px;
+	border-bottom: solid #666 2px;
+	margin-top: 5px;
+	border-radius: 4px;
+}
+
+#project-form-wrapper.show {
+	height: 350px;
+}
+#project-form {
+	padding-top: 0px;
+}
+#error-project {
+  margin: 0px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+#project-form .label {
+	width: 100px;
+	display: inline-block;
+}
+#description-label {
+	position: relative;
+	bottom: 50px;
+}
+textarea {
+	border: none;
+	background: #e5e5e5;
+	padding: 6px;
+	border-radius: 4px;
+}
+textarea:focus {
+	border: solid #555 2px;
+	outline : none;
+}
+
+input {
+	font-size: 14px;
+	color: #222;
+	margin-bottom: 10px;
+	padding: 8px 8px 8px 10px;
+	border-radius: 2px;
+	background: #e5e5e5;
+	outline: none;
+	border: none;
+}
+
+input:focus{
+	outline: none;
+	border: solid #555 2px;
+}
+
+button {
+	border: none;
+}
+button:hover {
+	cursor: pointer;
+}
+
+#add-project, #save-project-edit {
+	width: 80px;
+	height: 30px;
+	margin-top: 15px;
+	color: #f5f5f5;
+	background: #e74c3c;
+	border-radius: 3px;
+}
+
+.project-entry {
+  width: 100%;
+	margin-bottom: 10px; 
+	background: #fff;
+	color: #666;
+	padding: 10px 15px;
+	border-radius: 3px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+ }
+
+.project-entry .fa {
+	color: #e74c3c;
+	font-size: 17px;
+	margin-right: 10px;
+}
+
+.entry-details, .entry-buttons {
+	display: inline-block;
+	width: 47%;
+}
+.entry-details {
+	font-size: 12px;
+	margin: 0px;
+}
+.entry-buttons {
+	text-align: right;
+}
+.entry-title {
+	margin: 0px;
+}
+
+#project-activities h3, #todo-display h3 {
+	margin: 40px 0px 10px 0px;
+}
+#project-activities .entry-buttons .delete-activity {
+	color: #f7c1bb;
+}
+#project-activities .entry-buttons .delete-activity:hover {
+	color: #e74c3c;
+}
+
+#completed-activities .entry-buttons .check-activity {
+	color: #25b95a;
+	font-size: 22px;
+
+}
+
+#delete-project-icon {
+	margin: 15px 0px 0px 0px;
+	font-size: 25px;
+	color: #e74c3c;
+}
+
+
+.project {
+	font-size: 14px;
+	margin-bottom: 30px;
+	padding: 0px 5px 10px 5px;
+}
+.project .header  {
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: normal;
+	font-family: serif;
+}
+.deadline-sec {
+	width: 40%;
+	float: left;
+}
+.deadline {
+	margin-top: 8px;
+	line-height: 26px;
+}
+.progress-sec {
+	float: left;
+	width: 58%;
+}
+.bar-wrapper {
+	width: 91%;
+	height: 5px;
+	margin-top: 12px;
+	background: #ddd;
+	border-radius: 4px;
+	clear: both;
+}
+
+.progress-bar {
+	height: 5px;
+	background: #e74c3c;
+	border-radius: 4px;
+}
+.project-buttons {
+	clear: both;
+	padding-top: 20px;
+}
+.project .fa {
+	font-size: 18px;
+	margin-right: 10px;
+	color: #e74c3c;
+}
+#project-details {
+	font-size: 14px;
+}
+#project-activities {
+	padding-top: 60px;
+}
+
+#project-viewer {
+	padding: 4px 10px 0 10px ;
+}
+#pd-title {
+	font-weight: normal;
+	margin-bottom: 15px;
+	font-family: serif;
+}
+
+#show-home .fa {
+	font-size: 12px;
+	margin-right: 10px;
+	color: #e74c3c;
+	margin-left: 0px;
+}
+
+
+
+#todo-form, #activity-form {
+	width: 100%;
+	padding: 8px 15px 15px 5px;
+}
+
+#error-todo, #error-activity {
+	font-size: 12px;
+	margin: 7px 0px;
+	font-style: italic;
+	color: red;
+}
+#todo-form-wrapper, #activity-form-wrapper {
+	width: 100%;
+	padding-top: 0px;
+	height: 55px;
+	overflow-y: hidden;
+	transition: 0.3s linear;
+	border-bottom: solid #666 2px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+#activity-form-wrapper {
+	margin-top: 50px;
+}
+#todo-form-wrapper.show , #activity-form-wrapper.show {
+	height: 220px;
+}
+
+#todo-form h4 , #activity-form h4 {
+	margin-top: 7px;
+	padding: 0px 5px;
+}
+
+#priority {
+	width: 190px;
+	padding: 8px 8px 8px 10px;
+	border-radius: 2px;
+	margin-bottom: 20px;
+	outline: none;
+	border: none;
+	color: inherit;
+}
+#add-todo, #save-todo-edit, #add-activity {
+	margin-top: 15px;
+	width: 80px;
+	height: 30px;
+	background-color: #e74c3c;
+	color: white;
+	border-radius: 3px;
+}
+.todo {
+  width: 100%;
+	height: 70px;
+	overflow-y: hidden;
+	transition: 0.3s linear;
+	margin-bottom: 10px; 
+	background: #fff;
+	color: #666;
+	padding:10px 15px;
+	border-radius: 3px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+
+ }
+
+.todo.show {
+	height: 190px;
+}
+.todo .title {
+	dborder: solid black 2px;
+	font-size: 15px;
+	margin: 0;
+}
+#show-more {
+	float: right;
+	padding: 0px;
+	padding-right: 10px;
+}
+.todo-details {
+	padding: 0px;
+}
+.todo-details p {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+.todo-details p:nth-child(1) {
+	font-size: 12px;
+	line-height: 1em;
+	margin: 10px 0 20px 0px;
+}
+.add-todo-project {
+	border: solid #e74c3c 2px;
+	border-radius: 3px;
+	cursor: pointer;
+	line-height: 1em;
+	padding: 6px 11px;
+	text-align: center;
+	margin-left: 20px;
+	color: #e74c3c;
+}
+.added-to-project {
+	font-size: 14px;
+	color: #ffff1a;
+}
+#todo-project-form {
+	padding: 7px 5px;
+	margin: 3px 0px;
+	max-width: 200px !important;
+}
+#todo-project-form option {
+	padding: 3px;
+	max-width: 250px !important;
+}
+#todo-project {
+	width: 100%;
+}
+
+.todo-buttons {
+	clear: both;
+	margin-top: 7px;
+	padding-right: 40px;
+	width: 100%;
+	dborder: solid blue 2px;
+}
+
+.todo .fa {
+	padding: 10px 30px 10px 0px;
+	color: #e74c3c;
+	font-size: 20px;
+	dborder: solid teal 2px;
+}
+.check-todo.fa-check {  
+	font-size: 20px;
+  cursor: pointer;
+  padding:1px;
+  margin-top: 7px;
+  border:solid 2px #e74c3c;
+  border-radius: 50%;
+  float: right;
+}
+
+.fa-plus, .fa-close {
+	float: right;
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.fa-plus:hover, .fa-close:hover {
+	cursor: pointer;
+}
+
+.fa:hover {
+	cursor: pointer;
+}
+span i {
+	cursor: pointer;
+}
+
+
+
+
+.hide {
+	display: none;
+}
+
+#todo-display {
+	margin-bottom: 200px;
+}
+#uncompleted {
+	margin-bottom: 50px;
+}
+#completed {
+	margin-bottom: 100px;
+}
+.project .title{
+	cursor: pointer;
+}
+
+
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: 26px;
+	}
+  #container {
+  	width: 100%;
+	  padding: 10px 20px 50px 20px;
+  }
+}
+
+

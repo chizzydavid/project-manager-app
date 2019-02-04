@@ -1,5 +1,5 @@
 <?php 
-  require_once('project.php');
+  require_once('Project.php');
 
   if (isset($_GET['todo']) && isset($_GET['project'])){
     if ($_GET['todo'] == 'all' && $_GET['project'] == 'all') {

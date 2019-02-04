@@ -40,9 +40,6 @@
   }
 
   $db = new DATABASE;
-
- 
-
 ?>
 
 
